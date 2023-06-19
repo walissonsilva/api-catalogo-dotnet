@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: APICatalogo
+    platform: linux/x86_64
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: CatalogoDB
+      MYSQL_USER: walisson
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./.docker-volumes/mysql:/var/lib/mysql"
